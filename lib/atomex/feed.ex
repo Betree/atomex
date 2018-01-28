@@ -1,32 +1,16 @@
 defmodule Atomex.Feed do
   import XmlBuilder
   alias Atomex.Feed
-  alias Atomex.Types.{Person, Link}
-#
-#  defstruct id: "",
-#            title: "",
-#            updated: DateTime.utc_now(),
-#            # Recommended
-#            author: [],
-#            link: [],
-#            # Optional
-#            category: [],
-#            contributor: [],
-#            generator: nil,
-#            icon: nil,
-#            logo: nil,
-#            rights: nil,
-#            subtitle: nil,
-#            entries: nil
+  alias Atomex.Types.{Person, Link, Text}
 
   @doc"""
   Create a new feed
   """
-  def new(id, title, last_update_datetime) do
+  def new(id, last_update_datetime, title, title_type \\ "text") do
     [
       {:id, nil, id},
-      {:title, nil, title},
-      {:updated, nil, DateTime.to_iso8601(last_update_datetime)}
+      Text.new(:title, title, title_type),
+      {:updated, nil, DateTime.to_iso8601(last_update_datetime)},
     ]
   end
 

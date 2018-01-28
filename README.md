@@ -3,7 +3,9 @@
 **Disclaimer:** Still in development & not ready for production
 
 Atomex is an ATOM 1.0 feed builder with a focus on [RFC4287](https://tools.ietf.org/html/rfc4287) compliance
-and extendability.
+and extendability. Safe to use with user content: everything is escaped by default.
+
+Built on top of [xml_builder](https://github.com/joshnuss/xml_builder/)
 
 ## TODO
 
@@ -18,7 +20,7 @@ and extendability.
   * [ ] rights
   * [ ] subtitle
 - [x] Entry required params (id, title, updated)
-- [ ] Entry recommended params (author, content, link, summary)
+- [x] Entry recommended params (author, content, link, summary)
 - [ ] Entry optional params
   * [ ] category
   * [ ] contributor
@@ -46,7 +48,7 @@ are required.
 alias Atomex.{Feed, Entry}
 
 def build_feed(comments) do
-  Feed.new("https://example.com", "My incredible feed", DateTime.utc_now)
+  Feed.new("https://example.com", DateTime.utc_now, "My incredible feed")
   |> Feed.author("John Doe", email: "JohnDoe@example.com")
   |> Feed.link("https://example.com/feed", rel: "self")
   |> Feed.entries(Enum.map(comments, &get_entry/1))
@@ -54,12 +56,19 @@ def build_feed(comments) do
   |> Atomex.generate_document()
 end
 
-defp get_entry(comment) do
-  Entry.new("https://example.com/comments/#{comment.id}", "New comment by #{comment.user.name}", comment.inserted_at)
-  |> Entry.author(comment.user.name, uri: "https://example.com/users/#{comment.user.id}")
-  |> Entry.content("#{comment.user.name}: #{comment.text}")
+defp get_entry(_comment = %{id, text, inserted_at, user}) do
+  Entry.new("https://example.com/comments/#{id}", "New comment by #{user.name}", inserted_at)
+  |> Entry.author(user.name, uri: "https://example.com/users/#{user.id}")
+  |> Entry.content("#{user.name}: #{text}")
   |> Entry.build()
 end
+```
+
+To avoid escaping, you can pass a tuple as value like:
+
+```elixir
+Entry.content(entry, {:cdata, "<h1>Amazing</h1>"}, type: "html")
+# Render as => <content type="html"><![CDATA[<h1>Amazing</h1>]]></content>
 ```
 
 Some rules to remember while building your feed:

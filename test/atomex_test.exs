@@ -8,7 +8,7 @@ defmodule AtomexTest do
   @last_update_date ~N[2016-05-24 13:26:08.003]
   test "full render of a simple feed" do
     result =
-      Feed.new("https://example.com/", "My incredible feed", DateTime.from_naive!(@last_update_date, "Etc/UTC"))
+      Feed.new("https://example.com/", DateTime.from_naive!(@last_update_date, "Etc/UTC"), "My incredible feed")
       |> Feed.author("Steven Wilson", email: "steven@example.com")
       |> Feed.author("David Gilmour")
       |> Feed.link("https://example.com/feed", rel: "self")
@@ -33,7 +33,9 @@ defmodule AtomexTest do
       <title>My incredible feed</title>
       <updated>2016-05-24T13:26:08.003Z</updated>
       <entry>
-        <content>Hello World</content>
+        <summary>Hello World</summary>
+        <link href="https://example.com/entry/1" rel="alternate"/>
+        <content>Hello World, I'm a very long content</content>
         <author>
           <name>Andrew Latimer</name>
           <uri>https://example.com/users/~Andrew</uri>
@@ -43,7 +45,9 @@ defmodule AtomexTest do
         <updated>2016-05-24T12:26:08.003Z</updated>
       </entry>
       <entry>
-        <content>Hello World</content>
+        <summary>Hello World</summary>
+        <link href="https://example.com/entry/2" rel="alternate"/>
+        <content>Hello World, I'm a very long content</content>
         <author>
           <name>Andrew Latimer</name>
           <uri>https://example.com/users/~Andrew</uri>
@@ -62,9 +66,11 @@ defmodule AtomexTest do
       |> NaiveDateTime.add(-3600 * idx, :seconds)
       |> DateTime.from_naive!("Etc/UTC")
 
-    Entry.new("https://example.com/entry/#{idx}", "New entry: #{idx}", comment_last_update)
+    Entry.new("https://example.com/entry/#{idx}", comment_last_update, "New entry: #{idx}")
     |> Entry.author("Andrew Latimer", uri: "https://example.com/users/~Andrew")
-    |> Entry.content("Hello World")
+    |> Entry.content("Hello World, I'm a very long content")
+    |> Entry.link("https://example.com/entry/#{idx}", rel: "alternate")
+    |> Entry.summary("Hello World")
     |> Entry.build()
   end
 end
