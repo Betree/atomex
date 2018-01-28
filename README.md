@@ -1,5 +1,7 @@
 # Atomex
 
+**Disclaimer:** Still in development & not ready for production
+
 Atomex is an ATOM 1.0 feed builder with a focus on [RFC4287](https://tools.ietf.org/html/rfc4287) compliance
 and extendability.
 
@@ -8,7 +10,22 @@ and extendability.
 - [x] Feed required params (id, title, updated)
 - [x] Feed recommended params (author, link)
 - [ ] Feed optional params
-- [ ] Entry required params (...)
+  * [ ] category
+  * [ ] contributor
+  * [ ] generator
+  * [ ] icon
+  * [ ] logo
+  * [ ] rights
+  * [ ] subtitle
+- [x] Entry required params (id, title, updated)
+- [ ] Entry recommended params (author, content, link, summary)
+- [ ] Entry optional params
+  * [ ] category
+  * [ ] contributor
+  * [ ] published
+  * [ ] rights
+  * [ ] source
+- [ ] Validator
 
 ## Installation
 
@@ -33,13 +50,15 @@ def build_feed(comments) do
   |> Feed.author("John Doe", email: "JohnDoe@example.com")
   |> Feed.link("https://example.com/feed", rel: "self")
   |> Feed.entries(Enum.map(comments, &get_entry/1))
-  |> Atomex.build_document()
+  |> Feed.build()
+  |> Atomex.generate_document()
 end
 
 defp get_entry(comment) do
   Entry.new("https://example.com/comments/#{comment.id}", "New comment by #{comment.user.name}", comment.inserted_at)
   |> Entry.author(comment.user.name, uri: "https://example.com/users/#{comment.user.id}")
   |> Entry.content("#{comment.user.name}: #{comment.text}")
+  |> Entry.build()
 end
 ```
 

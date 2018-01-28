@@ -1,45 +1,51 @@
 defmodule Atomex.Feed do
+  import XmlBuilder
   alias Atomex.Feed
   alias Atomex.Types.{Person, Link}
+#
+#  defstruct id: "",
+#            title: "",
+#            updated: DateTime.utc_now(),
+#            # Recommended
+#            author: [],
+#            link: [],
+#            # Optional
+#            category: [],
+#            contributor: [],
+#            generator: nil,
+#            icon: nil,
+#            logo: nil,
+#            rights: nil,
+#            subtitle: nil,
+#            entries: nil
 
-  defstruct id: "",
-            title: "",
-            updated: DateTime.utc_now(),
-            # Recommended
-            author: [],
-            link: [],
-            # Optional
-            category: [],
-            contributor: [],
-            generator: nil,
-            icon: nil,
-            logo: nil,
-            rights: nil,
-            subtitle: nil,
-            entries: nil
-
-  @doc """
+  @doc"""
   Create a new feed
   """
   def new(id, title, last_update_datetime) do
-    %Feed{
-      id: id,
-      title: title,
-      updated: last_update_datetime
-    }
+    [
+      {:id, nil, id},
+      {:title, nil, title},
+      {:updated, nil, DateTime.to_iso8601(last_update_datetime)}
+    ]
   end
 
-  @def"""
+  @doc"""
+  Must be called before build_document, once the feed is fully prepared
+  """
+  def build(feed) do
+    element(:feed, %{xmlns: "http://www.w3.org/2005/Atom"}, feed)
+  end
+
+  @doc"""
   Accepted values for params: uri, email
   """
-  def author(feed = %Feed{author: existing}, name, params \\ []),
-    do: Map.put(feed, :author, [Person.new(name, params) | existing])
+  def author(feed, name, params \\ []), do: [Person.new(:author, name, params) | feed]
 
-  @def"""
+  @doc"""
   Accepted values for params: rel, type, hreflang, title, length
   """
-  def link(feed = %Feed{link: existing}, href, params \\ []),
-    do: Map.put(feed, :link, [Link.new(href, params) | existing])
+  def link(feed, href, params \\ []), do: [Link.new(href, params) | feed]
 
-  def entries(feed = %Feed{}, entries), do: Map.put(feed, :entries, entries)
+  def entries(feed, entries), do: feed ++ entries
 end
