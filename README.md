@@ -1,8 +1,13 @@
 # Atomex
 
-Atomex is an ATOM 1.0 feed builder with a focus on [RFC4287](https://tools.ietf.org/html/rfc4287) compliance
-and extendability. It is safe to use it with user content: everything is escaped by default.
-Built on top of [xml_builder](https://github.com/joshnuss/xml_builder/)
+[![Coverage Status](https://coveralls.io/repos/github/Betree/atomex/badge.svg?branch=master)](https://coveralls.io/github/Betree/atomex?branch=master)
+[![Build Status](https://travis-ci.org/Betree/atomex.svg?branch=master)](https://travis-ci.org/Betree/atomex)
+
+Atomex is an ATOM 1.0 feed builder with a focus on [RFC4287](https://tools.ietf.org/html/rfc4287) compliance,
+security and extensibility. It is safe to use it with user content: everything is escaped by default.
+Built on top of [xml_builder](https://github.com/joshnuss/xml_builder/).
+
+API reference is available here: https://hexdocs.pm/atomex/api-reference.html
 
 ## TODO
 
@@ -31,7 +36,7 @@ Built on top of [xml_builder](https://github.com/joshnuss/xml_builder/)
 ```elixir
 def deps do
   [
-    {:atomex, github: "Betree/atomex"}
+    {:atomex, "0.2.0"}
   ]
 end
 ```
@@ -95,8 +100,4 @@ For more complicated use cases, content can also be given a xml element directly
 
 ## Validating your feed
 
-Some rules to remember while building your feed:
-*  A feed must contain at least one author element unless all of the entry elements contain at least one author element.
-
-See [this](https://validator.w3.org/feed/docs/atom.html) for more info about Atom specifications or try to
-[validate your feed](https://validator.w3.org/feed/).
+Use [this tool from W3C](https://validator.w3.org/feed/)

@@ -6,7 +6,7 @@ defmodule Atomex.MixProject do
       app: :atomex,
       version: "0.2.0",
       elixir: "~> 1.6",
-      description: "ATOM 1.0 feed builder with a focus on standards compliance and extendability",
+      description: "ATOM feed builder with a focus on standards compliance, security and extensibility",
       elixirc_paths: elixirc_paths(Mix.env),
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -39,7 +39,11 @@ defmodule Atomex.MixProject do
     [
      files: ["lib", "mix.exs", "README.md"],
      maintainers: ["Benjamin Piouffle"],
-     licenses: ["MIT"]
-   ]
+     licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/Betree/atomex",
+        "Docs" => "https://hexdocs.pm/atomex"
+      }
+    ]
   end
 end
