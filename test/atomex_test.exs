@@ -1,8 +1,5 @@
 defmodule AtomexTest do
-  use ExUnit.Case
-  require Logger
-  alias Atomex.{Feed, Entry}
-
+  use Atomex.TestCase
   doctest Atomex
 
   @last_update_date ~N[2016-05-24 13:26:08.003]

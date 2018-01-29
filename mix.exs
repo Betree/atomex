@@ -4,27 +4,42 @@ defmodule Atomex.MixProject do
   def project do
     [
       app: :atomex,
-      version: "0.1.0",
+      version: "0.2.0",
       elixir: "~> 1.6",
+      description: "ATOM 1.0 feed builder with a focus on standards compliance and extendability",
+      elixirc_paths: elixirc_paths(Mix.env),
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package(),
+      test_coverage: [tool: ExCoveralls],
+      docs: [extras: ["README.md"], main: "readme"],
+      preferred_cli_env: [coveralls: :test]
     ]
   end
 
-  # Run "mix help compile.app" to learn about applications.
   def application do
-    [
-      extra_applications: [:logger]
-    ]
+    [extra_applications: [:logger]]
   end
 
-  # Run "mix help deps" to learn about dependencies.
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_),     do: ["lib"]
+
   defp deps do
     [
       {:xml_builder, "~> 2.0.0"},
-      {:sweet_xml, "~> 0.6.5", only: :test}
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
+      {:dialyxir, "~> 0.5", only: :dev, runtime: false},
+      {:sweet_xml, "~> 0.6.5", only: :test},
+      {:ex_doc, "~> 0.11", only: :dev, runtime: false},
+      {:earmark, "~> 0.1", only: :dev, runtime: false},
+      {:excoveralls, "~> 0.8", only: :test},
     ]
+  end
+
+  defp package do
+    [
+     files: ["lib", "mix.exs", "README.md"],
+     maintainers: ["Benjamin Piouffle"],
+     licenses: ["MIT"]
+   ]
   end
 end
