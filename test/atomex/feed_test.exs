@@ -16,6 +16,12 @@ defmodule Atomex.FeedTest do
     |> assert_contains(~s(<feed xmlns="http://www.w3.org/2005/Atom" xmlns:custom="https://example.com">))
   end
 
+  describe "recommended fields" do
+    test "link" do
+      test_field :link, ["/test"], ~s(<link href="/test"/>)
+    end
+  end
+
   describe "Optional fields" do
     test "rights" do
       test_field(:rights, ["xxx"], "<rights>xxx</rights>")

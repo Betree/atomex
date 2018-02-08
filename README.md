@@ -36,7 +36,7 @@ API reference is available here: https://hexdocs.pm/atomex/api-reference.html
 ```elixir
 def deps do
   [
-    {:atomex, "0.2.0"}
+    {:atomex, "0.3.0"}
   ]
 end
 ```

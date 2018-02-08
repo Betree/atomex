@@ -16,6 +16,16 @@ defmodule Atomex.EntryTest do
     test_field(:content, [{:cdata, "<h1>Amazing</h1>"}, [type: "html"]], expected)
   end
 
+  describe "Recommended fields" do
+    test "author" do
+      test_field :author, ["Gandhi"], "<author><name>Gandhi</name></author>"
+    end
+
+    test "link" do
+      test_field :link, ["/test"], ~s(<link href="/test"/>)
+    end
+  end
+
   describe "Optional fields" do
     test "rights" do
       test_field(:rights, ["xxx"], "<rights>xxx</rights>")
