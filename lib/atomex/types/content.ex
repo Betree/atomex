@@ -1,12 +1,12 @@
 defmodule Atomex.Types.Content do
-  @moduledoc"""
+  @moduledoc """
   A content as described in Atom specs.
   See [this link](https://validator.w3.org/feed/docs/atom.html#content)
   """
 
   import XmlBuilder
 
-  @doc"""
+  @doc """
   Create a new content tag.
 
   In the most common case, the type attribute is either text, html, xhtml, in which case the content element is defined

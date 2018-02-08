@@ -13,22 +13,22 @@ API reference is available here: https://hexdocs.pm/atomex/api-reference.html
 
 - [x] Feed required params (id, title, updated)
 - [x] Feed recommended params (author, link)
-- [ ] Feed optional params
-  * [ ] category
-  * [ ] contributor
-  * [ ] generator
-  * [ ] icon
-  * [ ] logo
-  * [ ] rights
-  * [ ] subtitle
+- [x] Feed optional params
+    * [x] category
+    * [x] contributor
+    * [x] generator
+    * [x] icon
+    * [x] logo
+    * [x] rights
+    * [x] subtitle
 - [x] Entry required params (id, title, updated)
 - [x] Entry recommended params (author, content, link, summary)
 - [ ] Entry optional params
-  * [x] category
-  * [x] contributor
-  * [x] published
-  * [x] rights
-  * [ ] source
+    * [x] category
+    * [x] contributor
+    * [x] published
+    * [x] rights
+    * [ ] source
 - [ ] Validator
 
 ## Installation

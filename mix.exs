@@ -4,7 +4,7 @@ defmodule Atomex.MixProject do
   def project do
     [
       app: :atomex,
-      version: "0.2.0",
+      version: "0.3.0",
       elixir: "~> 1.6",
       description: "ATOM feed builder with a focus on standards compliance, security and extensibility",
       elixirc_paths: elixirc_paths(Mix.env),
@@ -32,6 +32,7 @@ defmodule Atomex.MixProject do
       {:ex_doc, "~> 0.11", only: :dev, runtime: false},
       {:earmark, "~> 0.1", only: :dev, runtime: false},
       {:excoveralls, "~> 0.8", only: :test},
+      {:credo, "~> 0.9.0-rc1", only: [:dev, :test], runtime: false}
     ]
   end
 

@@ -14,4 +14,8 @@ defmodule Atomex do
   def generate_document(feed) do
     XmlBuilder.doc(feed)
   end
+
+  def version do
+    elem(:application.get_key(:atomex, :vsn), 1)
+  end
 end

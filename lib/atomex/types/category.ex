@@ -1,11 +1,11 @@
 defmodule Atomex.Types.Category do
-  @moduledoc"""
+  @moduledoc """
   A category as described in Atom specs. See [this link](https://validator.w3.org/feed/docs/atom.html#category)
   """
 
   import XmlBuilder
 
-  @doc"""
+  @doc """
   Create a new category tag.
 
   ## Parameters

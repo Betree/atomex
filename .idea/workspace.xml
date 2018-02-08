@@ -3,7 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="7dbde0e5-aa50-41e1-92f0-cad9d07b0196" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/lib/atomex.ex" afterPath="$PROJECT_DIR$/lib/atomex.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/atomex/entry.ex" afterPath="$PROJECT_DIR$/lib/atomex/entry.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/atomex/feed.ex" afterPath="$PROJECT_DIR$/lib/atomex/feed.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/atomex/types/category.ex" afterPath="$PROJECT_DIR$/lib/atomex/types/category.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/atomex/types/content.ex" afterPath="$PROJECT_DIR$/lib/atomex/types/content.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/atomex/types/link.ex" afterPath="$PROJECT_DIR$/lib/atomex/types/link.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/atomex/types/person.ex" afterPath="$PROJECT_DIR$/lib/atomex/types/person.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/atomex/types/text.ex" afterPath="$PROJECT_DIR$/lib/atomex/types/text.ex" />
       <change beforePath="$PROJECT_DIR$/mix.exs" afterPath="$PROJECT_DIR$/mix.exs" />
+      <change beforePath="$PROJECT_DIR$/mix.lock" afterPath="$PROJECT_DIR$/mix.lock" />
+      <change beforePath="$PROJECT_DIR$/test/atomex/entry_test.exs" afterPath="$PROJECT_DIR$/test/atomex/entry_test.exs" />
+      <change beforePath="$PROJECT_DIR$/test/atomex/feed_test.exs" afterPath="$PROJECT_DIR$/test/atomex/feed_test.exs" />
+      <change beforePath="$PROJECT_DIR$/test/atomex/types/category_test.exs" afterPath="$PROJECT_DIR$/test/atomex/types/category_test.exs" />
+      <change beforePath="$PROJECT_DIR$/test/atomex/types/content_test.exs" afterPath="$PROJECT_DIR$/test/atomex/types/content_test.exs" />
+      <change beforePath="$PROJECT_DIR$/test/atomex/types/link_test.exs" afterPath="$PROJECT_DIR$/test/atomex/types/link_test.exs" />
+      <change beforePath="$PROJECT_DIR$/test/atomex/types/person_test.exs" afterPath="$PROJECT_DIR$/test/atomex/types/person_test.exs" />
+      <change beforePath="$PROJECT_DIR$/test/atomex/types/text_test.exs" afterPath="$PROJECT_DIR$/test/atomex/types/text_test.exs" />
+      <change beforePath="$PROJECT_DIR$/test/atomex_test.exs" afterPath="$PROJECT_DIR$/test/atomex_test.exs" />
+      <change beforePath="$PROJECT_DIR$/test/support/atomex_case.ex" afterPath="$PROJECT_DIR$/test/support/atomex_case.ex" />
     </list>
     <ignored path="$PROJECT_DIR$/_build/dev/lib/atomex/ebin/" />
     <ignored path="$PROJECT_DIR$/_build/test/lib/atomex/ebin/" />
@@ -18,44 +36,203 @@
     <option name="CLEAR_OUTPUT_DIRECTORY" value="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="400">
-                <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-                <folding>
-                  <marker date="1517214396239" expanded="true" signature="1158:1195" ph="do: ..." />
-                  <marker date="1517214396239" expanded="true" signature="1409:1429" ph="..." />
-                  <marker date="1517214396239" expanded="true" signature="1456:1753" ph="do: ..." />
-                  <marker date="1517214396239" expanded="true" signature="1813:2104" ph="do: ..." />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mix.exs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mix.exs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.45311517">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="atomex_case.ex" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/support/atomex_case.ex">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="259">
+                  <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="feed_test.exs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/atomex/feed_test.exs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="15" column="103" lean-forward="false" selection-start-line="15" selection-start-column="103" selection-end-line="15" selection-end-column="103" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="category_test.exs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/atomex/types/category_test.exs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="80">
+                  <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="content_test.exs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/atomex/types/content_test.exs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="80">
+                  <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="link_test.exs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/atomex/types/link_test.exs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="80">
+                  <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="person_test.exs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/atomex/types/person_test.exs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="80">
+                  <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="text_test.exs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/atomex/types/text_test.exs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="80">
+                  <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test_helper.exs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/test_helper.exs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="20">
+                  <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="entry_test.exs" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/test/atomex/entry_test.exs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="580">
+                  <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="atomex_test.exs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/atomex_test.exs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="320">
+                  <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="FIRST">
+                  <first_editor relative-caret-position="120">
+                    <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+                    <folding>
+                      <marker date="1518081114595" expanded="true" signature="1182:1219" ph="do: ..." />
+                      <marker date="1518081114595" expanded="true" signature="1433:1453" ph="..." />
+                      <marker date="1518081114595" expanded="true" signature="1480:1777" ph="do: ..." />
+                      <marker date="1518081114595" expanded="true" signature="1837:2128" ph="do: ..." />
+                    </folding>
+                  </first_editor>
+                  <second_editor />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="mix.exs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/mix.exs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="entry.ex" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/lib/atomex/entry.ex">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="700">
+                  <caret line="35" column="31" lean-forward="false" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="feed.ex" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/atomex/feed.ex">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="119">
+                  <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="atomex.ex" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/atomex.ex">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="340">
+                  <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="person.ex" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/atomex/types/person.ex">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="319">
+                  <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="text.ex" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/atomex/types/text.ex">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="399">
+                  <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>insert_field</find>
       <find>feed</find>
       <find>config</find>
-      <find>valida</find>
       <find>extendability</find>
+      <find>valida</find>
+      <find>.contributor</find>
     </findStrings>
     <replaceStrings>
       <replace>add_field</replace>
@@ -72,27 +249,31 @@
         <option value="$PROJECT_DIR$/lib/atomex/types/README.md" />
         <option value="$PROJECT_DIR$/lib/atomex/types/author.ex" />
         <option value="$PROJECT_DIR$/test/atomex/feed_text.exs" />
-        <option value="$PROJECT_DIR$/test/support/atomex_case.ex" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/lib/atomex/types/link.ex" />
         <option value="$PROJECT_DIR$/lib/atomex/types/content.ex" />
-        <option value="$PROJECT_DIR$/lib/atomex/types/person.ex" />
-        <option value="$PROJECT_DIR$/lib/atomex.ex" />
-        <option value="$PROJECT_DIR$/lib/atomex/feed.ex" />
-        <option value="$PROJECT_DIR$/lib/atomex/entry.ex" />
-        <option value="$PROJECT_DIR$/test/atomex_test.exs" />
-        <option value="$PROJECT_DIR$/test/atomex/feed_test.exs" />
         <option value="$PROJECT_DIR$/test/atomex/types/category.ex" />
         <option value="$PROJECT_DIR$/test/atomex/types/link.ex" />
         <option value="$PROJECT_DIR$/test/atomex/types/person.ex" />
         <option value="$PROJECT_DIR$/test/atomex/types/text.ex" />
-        <option value="$PROJECT_DIR$/lib/atomex/types/text.ex" />
         <option value="$PROJECT_DIR$/test/atomex/types/content.ex" />
-        <option value="$PROJECT_DIR$/test/atomex/entry_test.exs" />
-        <option value="$PROJECT_DIR$/test/atomex/types/content_test.exs" />
         <option value="$PROJECT_DIR$/lib/atomex/types/category.ex" />
-        <option value="$PROJECT_DIR$/mix.exs" />
+        <option value="$PROJECT_DIR$/lib/atomex.ex" />
+        <option value="$PROJECT_DIR$/lib/atomex/types/text.ex" />
+        <option value="$PROJECT_DIR$/test/atomex/entry_test.exs" />
+        <option value="$PROJECT_DIR$/test/atomex/feed_test.exs" />
+        <option value="$PROJECT_DIR$/test/atomex/types/category_test.exs" />
+        <option value="$PROJECT_DIR$/test/atomex/types/content_test.exs" />
+        <option value="$PROJECT_DIR$/test/atomex/types/link_test.exs" />
+        <option value="$PROJECT_DIR$/test/atomex/types/person_test.exs" />
+        <option value="$PROJECT_DIR$/test/atomex/types/text_test.exs" />
+        <option value="$PROJECT_DIR$/lib/atomex/types/person.ex" />
+        <option value="$PROJECT_DIR$/test/support/atomex_case.ex" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/mix.exs" />
+        <option value="$PROJECT_DIR$/test/atomex_test.exs" />
+        <option value="$PROJECT_DIR$/lib/atomex/feed.ex" />
+        <option value="$PROJECT_DIR$/lib/atomex/entry.ex" />
       </list>
     </option>
   </component>
@@ -124,7 +305,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -133,16 +313,37 @@
               <item name="atomex" type="b2602c69:ProjectViewProjectNode" />
               <item name="atomex" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="atomex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atomex" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atomex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atomex" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="atomex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atomex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atomex" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -225,25 +426,25 @@
       <workItem from="1517123682629" duration="12787000" />
       <workItem from="1517143600322" duration="6797000" />
       <workItem from="1517173827795" duration="7494000" />
-      <workItem from="1517197641323" duration="12296000" />
+      <workItem from="1517197641323" duration="12922000" />
+      <workItem from="1518075305929" duration="6691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43681000" />
+    <option name="totallyTimeSpent" value="50998000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28900525" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36544502" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16915688" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15208112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -270,14 +471,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/atomex/feed.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/atomex/entry.ex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
@@ -308,10 +501,10 @@
           <first_editor relative-caret-position="40">
             <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
             <folding>
-              <marker date="1517214396239" expanded="true" signature="1158:1195" ph="do: ..." />
-              <marker date="1517214396239" expanded="true" signature="1409:1429" ph="..." />
-              <marker date="1517214396239" expanded="true" signature="1456:1753" ph="do: ..." />
-              <marker date="1517214396239" expanded="true" signature="1813:2104" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1182:1219" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1433:1453" ph="..." />
+              <marker date="1518081114595" expanded="true" signature="1480:1777" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1837:2128" ph="do: ..." />
             </folding>
           </first_editor>
           <second_editor />
@@ -388,10 +581,10 @@
           <first_editor relative-caret-position="1180">
             <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
             <folding>
-              <marker date="1517214396239" expanded="true" signature="1158:1195" ph="do: ..." />
-              <marker date="1517214396239" expanded="true" signature="1409:1429" ph="..." />
-              <marker date="1517214396239" expanded="true" signature="1456:1753" ph="do: ..." />
-              <marker date="1517214396239" expanded="true" signature="1813:2104" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1182:1219" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1433:1453" ph="..." />
+              <marker date="1518081114595" expanded="true" signature="1480:1777" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1837:2128" ph="do: ..." />
             </folding>
           </first_editor>
           <second_editor />
@@ -436,10 +629,10 @@
           <first_editor relative-caret-position="640">
             <caret line="32" column="15" lean-forward="true" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
             <folding>
-              <marker date="1517214396239" expanded="true" signature="1158:1195" ph="do: ..." />
-              <marker date="1517214396239" expanded="true" signature="1409:1429" ph="..." />
-              <marker date="1517214396239" expanded="true" signature="1456:1753" ph="do: ..." />
-              <marker date="1517214396239" expanded="true" signature="1813:2104" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1182:1219" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1433:1453" ph="..." />
+              <marker date="1518081114595" expanded="true" signature="1480:1777" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1837:2128" ph="do: ..." />
             </folding>
           </first_editor>
           <second_editor />
@@ -498,10 +691,10 @@
           <first_editor relative-caret-position="400">
             <caret line="20" column="78" lean-forward="true" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
             <folding>
-              <marker date="1517214396239" expanded="true" signature="1158:1195" ph="do: ..." />
-              <marker date="1517214396239" expanded="true" signature="1409:1429" ph="..." />
-              <marker date="1517214396239" expanded="true" signature="1456:1753" ph="do: ..." />
-              <marker date="1517214396239" expanded="true" signature="1813:2104" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1182:1219" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1433:1453" ph="..." />
+              <marker date="1518081114595" expanded="true" signature="1480:1777" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1837:2128" ph="do: ..." />
             </folding>
           </first_editor>
           <second_editor />
@@ -509,27 +702,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/atomex/types/README.md" />
-    <entry file="file://$PROJECT_DIR$/test/support/atomex_case.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="114" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.exs" />
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -541,64 +718,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/atomex/utils.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/atomex/feed_test.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/atomex/types/link_test.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-          <folding>
-            <marker date="1517211677072" expanded="true" signature="41:56" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/atomex/types/text_test.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/atomex/types/person_test.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/atomex/feed.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="34" column="34" lean-forward="false" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/atomex/types/text.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/atomex/utils.ex" />
     <entry file="file://$PROJECT_DIR$/lib/atomex/types/link.ex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -615,82 +735,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/atomex/types/person.ex">
+    <entry file="file://$PROJECT_DIR$/deps/xml_builder/lib/xml_builder.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_helper.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/atomex/types/category_test.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="31" />
+        <state relative-caret-position="-787">
+          <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/atomex/types/category.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/atomex/types/text.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/atomex/types/category_test.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/atomex/types/content_test.exs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        <state relative-caret-position="80">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/atomex_test.exs">
+    <entry file="file://$PROJECT_DIR$/test/atomex/types/link_test.exs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="16" />
+        <state relative-caret-position="80">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/atomex/entry_test.exs">
+    <entry file="file://$PROJECT_DIR$/test/atomex/types/text_test.exs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="80">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/atomex/entry.ex">
+    <entry file="file://$PROJECT_DIR$/test/test_helper.exs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="58" selection-end-column="51" />
+        <state relative-caret-position="20">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/atomex.ex">
+    <entry file="file://$PROJECT_DIR$/lib/atomex/types/person.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="319">
+          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mix.exs">
+    <entry file="file://$PROJECT_DIR$/test/support/atomex_case.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="259">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -698,25 +818,160 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="400">
-            <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+          <first_editor relative-caret-position="120">
+            <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
             <folding>
-              <marker date="1517214396239" expanded="true" signature="1158:1195" ph="do: ..." />
-              <marker date="1517214396239" expanded="true" signature="1409:1429" ph="..." />
-              <marker date="1517214396239" expanded="true" signature="1456:1753" ph="do: ..." />
-              <marker date="1517214396239" expanded="true" signature="1813:2104" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1182:1219" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1433:1453" ph="..." />
+              <marker date="1518081114595" expanded="true" signature="1480:1777" ph="do: ..." />
+              <marker date="1518081114595" expanded="true" signature="1837:2128" ph="do: ..." />
             </folding>
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mix.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/atomex.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/atomex_test.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/atomex/types/person_test.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/atomex/feed_test.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="103" lean-forward="false" selection-start-line="15" selection-start-column="103" selection-end-line="15" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/atomex/feed.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/atomex/entry_test.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/atomex/entry.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="35" column="31" lean-forward="false" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>actioncable (v5.0.2, rbenv: 2.4.0) [gem]</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Elixir 1.5.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>atomex</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>Elixir 1.5.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

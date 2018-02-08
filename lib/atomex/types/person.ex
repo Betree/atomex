@@ -1,12 +1,12 @@
 defmodule Atomex.Types.Person do
-  @moduledoc"""
+  @moduledoc """
   A person (author or contributor) as described in Atom specs.
   See [this link](https://validator.w3.org/feed/docs/atom.html#person)
   """
 
   import XmlBuilder
 
-  @doc"""
+  @doc """
   Create a new Person for the `author` or `contributor` tags.
 
   ## Parameters
@@ -18,7 +18,8 @@ defmodule Atomex.Types.Person do
       - email
   """
   def new(tag, name, attributes \\ []) when tag in ~w(author contributor)a do
-    element(tag, nil, [element(:name, nil, name) | Enum.map(attributes, &value/1)])
+    content = [element(:name, nil, name) | Enum.map(attributes, &value/1)]
+    element(tag, nil, content)
   end
 
   defp value({tag, value}) when tag in ~w(uri email)a do

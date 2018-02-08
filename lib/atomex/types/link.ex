@@ -1,11 +1,11 @@
 defmodule Atomex.Types.Link do
-  @moduledoc"""
+  @moduledoc """
   A link as described in Atom specs. See [this link](https://validator.w3.org/feed/docs/atom.html#link)
   """
 
   import XmlBuilder
 
-  @doc"""
+  @doc """
   Create a new Link.
 
   ## Parameters

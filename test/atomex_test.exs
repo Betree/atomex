@@ -63,7 +63,8 @@ defmodule AtomexTest do
       |> NaiveDateTime.add(-3600 * idx, :seconds)
       |> DateTime.from_naive!("Etc/UTC")
 
-    Entry.new("https://example.com/entry/#{idx}", comment_last_update, "New entry: #{idx}")
+    "https://example.com/entry/#{idx}"
+    |> Entry.new(comment_last_update, "New entry: #{idx}")
     |> Entry.author("Andrew Latimer", uri: "https://example.com/users/~Andrew")
     |> Entry.content("Hello World, I'm a very long content")
     |> Entry.link("https://example.com/entry/#{idx}", rel: "alternate")
