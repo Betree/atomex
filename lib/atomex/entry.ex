@@ -3,6 +3,8 @@ defmodule Atomex.Entry do
   A feed entry
   """
 
+  @type t :: list()
+
   import XmlBuilder
   alias Atomex.Types.{Person, Link, Text, Content, Category}
 

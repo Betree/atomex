@@ -11,10 +11,12 @@ defmodule Atomex do
 
     - feed: an `Atomex.Feed`
   """
+  @spec generate_document(Atomex.Feed.t()) :: binary()
   def generate_document(feed) do
     XmlBuilder.doc(feed)
   end
 
+  @spec version() :: binary()
   def version do
     elem(:application.get_key(:atomex, :vsn), 1)
   end
