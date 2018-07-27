@@ -109,6 +109,7 @@ defmodule Atomex.Feed do
   """
   def generator(feed),
     do: add_field(feed, :generator, %{version: Atomex.version()}, "Atomex")
+
   def generator(feed, name, attributes \\ []),
     do: add_field(feed, :generator, attributes, name)
 

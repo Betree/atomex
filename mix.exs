@@ -13,7 +13,8 @@ defmodule Atomex.MixProject do
       package: package(),
       test_coverage: [tool: ExCoveralls],
       docs: [extras: ["README.md"], main: "readme"],
-      preferred_cli_env: [coveralls: :test]
+      preferred_cli_env: [coveralls: :test],
+      dialyzer: [remove_defaults: [:unknown]]
     ]
   end
 
@@ -26,13 +27,18 @@ defmodule Atomex.MixProject do
 
   defp deps do
     [
+      # Core dependencies
       {:xml_builder, "~> 2.0.0"},
-      {:dialyxir, "~> 0.5", only: :dev, runtime: false},
+
+      # Test
       {:sweet_xml, "~> 0.6.5", only: :test},
-      {:ex_doc, "~> 0.11", only: :dev, runtime: false},
+
+      # Dev
+      {:credo, "~> 0.9.0-rc1", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.0.0-rc.3", only: :dev, runtime: false},
       {:earmark, "~> 0.1", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.11", only: :dev, runtime: false},
       {:excoveralls, "~> 0.8", only: :test},
-      {:credo, "~> 0.9.0-rc1", only: [:dev, :test], runtime: false}
     ]
   end
 
