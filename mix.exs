@@ -28,7 +28,7 @@ defmodule Atomex.MixProject do
   defp deps do
     [
       # Core dependencies
-      {:xml_builder, "~> 2.0.0"},
+      {:xml_builder, "~> 2.1.4"},
 
       # Test
       {:sweet_xml, "~> 0.6.5", only: :test},
