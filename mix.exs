@@ -6,8 +6,9 @@ defmodule Atomex.MixProject do
       app: :atomex,
       version: "0.3.0",
       elixir: "~> 1.6",
-      description: "ATOM feed builder with a focus on standards compliance, security and extensibility",
-      elixirc_paths: elixirc_paths(Mix.env),
+      description:
+        "ATOM feed builder with a focus on standards compliance, security and extensibility",
+      elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package(),
@@ -23,30 +24,30 @@ defmodule Atomex.MixProject do
   end
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(_),     do: ["lib"]
+  defp elixirc_paths(_), do: ["lib"]
 
   defp deps do
     [
       # Core dependencies
-      {:xml_builder, "~> 2.0.0"},
+      {:xml_builder, "~> 2.1"},
 
       # Test
       {:sweet_xml, "~> 0.6.5", only: :test},
 
       # Dev
-      {:credo, "~> 1.1.5", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.0.0-rc.3", only: :dev, runtime: false},
-      {:earmark, "~> 0.1", only: :dev, runtime: false},
-      {:ex_doc, "~> 0.11", only: :dev, runtime: false},
-      {:excoveralls, "~> 0.8", only: :test},
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.0", only: :dev, runtime: false},
+      {:earmark, "~> 1.4", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.23", only: :dev, runtime: false},
+      {:excoveralls, "~> 0.13", only: :test}
     ]
   end
 
   defp package do
     [
-     files: ["lib", "mix.exs", "README.md"],
-     maintainers: ["Benjamin Piouffle"],
-     licenses: ["MIT"],
+      files: ["lib", "mix.exs", "README.md"],
+      maintainers: ["Benjamin Piouffle"],
+      licenses: ["MIT"],
       links: %{
         "GitHub" => "https://github.com/Betree/atomex",
         "Docs" => "https://hexdocs.pm/atomex"
