@@ -18,18 +18,23 @@ defmodule Atomex.EntryTest do
 
   describe "Recommended fields" do
     test "author" do
-      test_field :author, ["Gandhi"], "<author><name>Gandhi</name></author>"
+      test_field(:author, ["Gandhi"], "<author><name>Gandhi</name></author>")
     end
 
     test "link" do
-      test_field :link, ["/test"], ~s(<link href="/test"/>)
+      test_field(:link, ["/test"], ~s(<link href="/test"/>))
     end
   end
 
   describe "Optional fields" do
     test "rights" do
       test_field(:rights, ["xxx"], "<rights>xxx</rights>")
-      test_field(:rights, [{:cdata, "<p>Hi</p>"}, "html"], "<rights type=\"html\"><![CDATA[<p>Hi</p>]]></rights>")
+
+      test_field(
+        :rights,
+        [{:cdata, "<p>Hi</p>"}, "html"],
+        "<rights type=\"html\"><![CDATA[<p>Hi</p>]]></rights>"
+      )
     end
 
     test "contributor" do
@@ -42,7 +47,7 @@ defmodule Atomex.EntryTest do
     end
 
     test "category" do
-      test_field :category, ["Music"], "<category term=\"Music\"/>"
+      test_field(:category, ["Music"], "<category term=\"Music\"/>")
     end
   end
 

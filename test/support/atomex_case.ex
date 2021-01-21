@@ -1,5 +1,5 @@
 defmodule Atomex.TestCase do
-  @moduledoc"""
+  @moduledoc """
   Common test utils for Atomex
   """
 
@@ -13,7 +13,11 @@ defmodule Atomex.TestCase do
 
       @last_update_date ~N[2016-05-24 13:26:08.003]
       def test_feed do
-        Feed.new("https://example.com/", DateTime.from_naive!(@last_update_date, "Etc/UTC"), "My incredible feed")
+        Feed.new(
+          "https://example.com/",
+          DateTime.from_naive!(@last_update_date, "Etc/UTC"),
+          "My incredible feed"
+        )
       end
 
       def assert_contains(string1, string2) do

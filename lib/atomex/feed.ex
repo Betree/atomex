@@ -11,7 +11,7 @@ defmodule Atomex.Feed do
   @doc """
   Create a new feed
   """
-  @spec new(binary(), DateTime.t, binary(), binary()) :: Atomex.Feed.t
+  @spec new(binary(), DateTime.t(), binary(), binary()) :: Atomex.Feed.t()
   def new(id, last_update_datetime, title, title_type \\ "text") do
     [
       {:id, nil, id},
@@ -58,21 +58,21 @@ defmodule Atomex.Feed do
   @doc """
   Add an author to the feed. See `Atomex.Types.Person` for accepted attributes
   """
-  @spec author(Atomex.Feed.t, binary(), list()) :: Atomex.Feed.t
+  @spec author(Atomex.Feed.t(), binary(), list()) :: Atomex.Feed.t()
   def author(feed, name, attributes \\ []),
     do: add_field(feed, Person.new(:author, name, attributes))
 
   @doc """
   Add a link to the feed. See `Atomex.Types.Link` for accepted attributes
   """
-  @spec link(Atomex.Feed.t, binary(), list()) :: Atomex.Feed.t
+  @spec link(Atomex.Feed.t(), binary(), list()) :: Atomex.Feed.t()
   def link(feed, href, attributes \\ []),
     do: add_field(feed, Link.new(href, attributes))
 
   @doc """
   Add given entries to the feed
   """
-  @spec entries(Atomex.Feed.t, list(Atomex.Entry.t)) :: Atomex.Feed.t
+  @spec entries(Atomex.Feed.t(), list(Atomex.Entry.t())) :: Atomex.Feed.t()
   def entries(feed, entries),
     do: feed ++ entries
 
