@@ -4,7 +4,7 @@ defmodule Atomex.MixProject do
   def project do
     [
       app: :atomex,
-      version: "0.3.0",
+      version: String.trim(File.read!("VERSION")),
       elixir: "~> 1.6",
       description:
         "ATOM feed builder with a focus on standards compliance, security and extensibility",
@@ -39,7 +39,8 @@ defmodule Atomex.MixProject do
       {:dialyxir, "~> 1.0", only: :dev, runtime: false},
       {:earmark, "~> 1.4", only: :dev, runtime: false},
       {:ex_doc, "~> 0.23", only: :dev, runtime: false},
-      {:excoveralls, "~> 0.13", only: :test}
+      {:excoveralls, "~> 0.13", only: :test},
+      {:eliver, "~> 2.0.0", only: :dev}
     ]
   end
 
