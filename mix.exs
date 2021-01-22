@@ -46,7 +46,7 @@ defmodule Atomex.MixProject do
 
   defp package do
     [
-      files: ["lib", "mix.exs", "README.md"],
+      files: ["lib", "mix.exs", "README.md", "VERSION"],
       maintainers: ["Benjamin Piouffle"],
       licenses: ["MIT"],
       links: %{
