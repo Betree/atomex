@@ -13,7 +13,9 @@ defmodule Atomex do
   """
   @spec generate_document(Atomex.Feed.t()) :: binary()
   def generate_document(feed) do
-    XmlBuilder.doc(feed)
+    feed
+    |> XmlBuilder.document()
+    |> XmlBuilder.generate()
   end
 
   @spec version() :: binary()
