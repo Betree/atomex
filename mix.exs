@@ -36,7 +36,7 @@ defmodule Atomex.MixProject do
 
       # Dev
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.0", only: :dev, runtime: false},
+      {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
       {:earmark, "~> 1.4", only: :dev, runtime: false},
       {:ex_doc, "~> 0.23", only: :dev, runtime: false},
       {:excoveralls, "~> 0.13", only: :test},
