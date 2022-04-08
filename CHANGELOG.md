@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.5.1
+* downgrade ex_doc to 0.23.0
+
 ## 0.5.0
 * fix deprecation of XmlBuilder.doc/1 (@breunigs)
 * update dependencies
