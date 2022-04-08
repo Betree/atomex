@@ -32,7 +32,7 @@ defmodule Atomex.MixProject do
       {:xml_builder, "~> 2.1"},
 
       # Test
-      {:sweet_xml, "~> 0.6.5", only: :test},
+      {:sweet_xml, "~> 0.7.2", only: :test},
 
       # Dev
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
