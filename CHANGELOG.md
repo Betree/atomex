@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0
+* fix deprecation of XmlBuilder.doc/1 (@breunigs)
+* update dependencies
+
 ## 0.4.1
 * Add missing VERSION file to the release
 
